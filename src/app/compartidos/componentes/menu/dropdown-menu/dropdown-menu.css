@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@reference 'tailwindcss';
 
 .formato-boton-menu{
     @apply cursor-pointer px-4 py-2 hover:bg-gray-200 rounded-xl transition-colors duration-300 ease-out outline-none focus:outline-none
