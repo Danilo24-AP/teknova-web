@@ -15,7 +15,7 @@ gsap.registerPlugin(TextPlugin);
 })
 export class AboutUs implements AfterViewInit {
 
-  // Obtenemos la referencia del elemento HTML que animaremos
+  
   @ViewChild('fraseAnimada', {static: true}) fraseAnimada!: ElementRef<HTMLSpanElement>;
 
   private frases: string[] = ['Innovación que acompaña.', 
@@ -25,7 +25,6 @@ export class AboutUs implements AfterViewInit {
   'Compromiso real.', 
   'Más que soporte, somos equipo.'];
 
-  // Guardamos la referencia del timeline para poder destruirlo si el componente se desmonta
   private timeline!: gsap.core.Timeline;
 
   ngAfterViewInit(): void {
@@ -33,28 +32,28 @@ export class AboutUs implements AfterViewInit {
   }
 
   initAnimacionEscritura(): void {
-    // Creamos el timeline con repeat: -1 para que sea infinito
+    // Timeline con repeat: -1 para que sea infinito
     this.timeline = gsap.timeline({repeat: -1});
 
     this.frases.forEach((frase) => {
-      // 1. Animación de ESCRITURA
+      // Animación de ESCRITURA
       this.timeline.to(this.fraseAnimada.nativeElement, {
-        duration: frase.length * 0.06, // Velocidad dinámica según el largo de la frase
+        duration: frase.length * 0.06,
         text: frase,
         ease: 'none'
       })
 
-      // 2. PAUSA (El tiempo que se queda la frase estática antes de borrarse)
+      // Tiempo que se queda la frase estática antes de borrarse
       .to({}, {duration: 1})
 
-      // 3. Animación de BORRADO (Hacia un string vacío)
+      // Animación de BORRADO
       .to(this.fraseAnimada.nativeElement, {
-        duration: frase.length * 0.03, // El borrado suele ser un poco más rápido
+        duration: frase.length * 0.03,
         text: '',
         ease: 'none'
       })
 
-      // 4. PAUSA corta antes de empezar la siguiente frase
+      // PAUSA, otra vez.
       .to({}, {duration: 1})
     })
   }

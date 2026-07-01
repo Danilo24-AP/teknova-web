@@ -16,5 +16,5 @@
 .tipo-texto{
     display: inline-block;
     letter-spacing: -0.02em;
-    white-space: nowrap; /* Evita que el texto salte de línea mientras se escribe */
+    white-space: nowrap;
 }

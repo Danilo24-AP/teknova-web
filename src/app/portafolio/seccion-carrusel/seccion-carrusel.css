@@ -12,7 +12,6 @@
   flex-direction: row;
 }
 
-/* ESTA ES LA CLAVE: Bloques con medidas reales en píxeles */
 .card-wrapper {
   display: flex;
   flex-direction: column;

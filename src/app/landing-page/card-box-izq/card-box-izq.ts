@@ -41,7 +41,7 @@ export class CardBoxIzq implements OnDestroy {
             x: -350,
             y: 0,
             duration: 1.2,
-            stagger: 0.45,          // Efecto uno por uno
+            stagger: 0.45,  // Efecto uno por uno
             ease: "back.out(1.5)"
           },
         );

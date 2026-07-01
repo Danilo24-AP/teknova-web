@@ -104,21 +104,20 @@ export class SeccionDos implements OnDestroy{
       // RESPONSIVE: Ajustes nativos de comportamiento según pantalla
       breakpoints: {
         768: {
-          gap: '70px', // Tu espacio original de 70px en computadores
+          gap: '70px', // Espacio original de 70px en computadores
         },
         1200:{
-          gap: '70px', // Mantén el mismo espacio en pantallas grandes
+          gap: '70px',
         }
       },
-      // CONFIGURACIÓN CLAVE: Aquí controlamos el flujo continuo sin fallos
+      // flujo continuo
       autoScroll: {
-        speed: 0.5,        // Velocidad constante del carrusel (más alto = más rápido)
-        pauseOnHover: true,// PAUSA INSTANTÁNEA al poner el cursor (sin retrasos)
+        speed: 0.5,        // Velocidad constante del carrusel
+        pauseOnHover: true,// PAUSA INSTANTANEA al poner el cursor
         pauseOnFocus: false,
       },
     });
 
-    // Inicializamos pasando explícitamente la extensión de AutoScroll
     this.instanciaSplide.mount({ AutoScroll });
   }
 

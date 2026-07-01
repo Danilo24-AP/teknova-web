@@ -1,10 +1,8 @@
 .contenedor{
     flex: 1;
-    /* El contenido crece para ocupar todo el espacio sobrante */
 }
 
 #page-wrapper {
   width: 100%;
-   /*Para que el cambio sea suave */
   overflow-x: hidden;
 }

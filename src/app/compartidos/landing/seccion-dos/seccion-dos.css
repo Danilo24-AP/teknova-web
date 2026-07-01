@@ -1,19 +1,16 @@
 @import 'tailwindcss';
 
-/* Forzamos a la lista a comportarse como fila horizontal estricta */
 .splide__list {
   display: flex;
   flex-direction: row;
 }
 
-/* ESTA ES LA CLAVE: Bloques con medidas reales en píxeles */
 .card-wrapper {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
 }
 
-/* Evita que los slides se deformen */
 .project-card {
   width: auto ;
   flex-shrink: 0;
@@ -25,7 +22,7 @@
 
 .texto-parrafo{
   line-height: 115%;
-  word-wrap: break-word; /* Rompe el texto si es muy largo */
-  white-space: normal;   /* Evita que se quede todo en una sola línea */
+  word-wrap: break-word;
+  white-space: normal;
   @apply text-[25px] inline-block hover:underline px-2 transition-all duration-300
 }

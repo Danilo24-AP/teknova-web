@@ -32,7 +32,7 @@ export class CardBoxDrh implements OnDestroy{
       let mm = gsap.matchMedia();
 
       mm.add("(min-width: 1024px)", () => {
-        // Estado inicial: Cuadros en su sitio (al centro)
+        // Estado normal: Cuadros en su sitio (al centro)
         gsap.set('.box-enter-drh', { opacity: 1, scale: 1});
 
         gsap.from('.box-enter-drh', 
@@ -43,7 +43,7 @@ export class CardBoxDrh implements OnDestroy{
             x: 350,
             y: 0,
             duration: 1.2,
-            stagger: 0.45,          // Efecto uno por uno
+            stagger: 0.45,  // Efecto uno por uno
             ease: "back.out(1.5)"
           },
         );

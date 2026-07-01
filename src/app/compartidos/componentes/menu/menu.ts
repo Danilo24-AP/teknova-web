@@ -21,7 +21,7 @@ export class Menu{
   isMobileMenuOpen = signal<boolean>(false);
   private lastScrollTop = 0;
   
-  // NUEVO: Un solo estado centralizado. Si abres uno, el otro se cierra automáticamente.
+  // Estado centralizado. Si abres uno, el otro se cierra automáticamente.
   dropdownActivo = signal<string | null>(null);
 
   get isMouse() {
@@ -48,7 +48,7 @@ export class Menu{
     this.dropdownActivo.update(current => current === menu ? null : menu);
   }
 
-  // Si hacen clic en cualquier parte vacía de la página, cerramos los dropdowns
+  // Si hacen clic en cualquier parte vacia de la pagina, cerramos los dropdowns
   @HostListener('document:click')
   onDocumentClick() {
     this.dropdownActivo.set(null);
@@ -62,21 +62,21 @@ export class Menu{
 
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-    // Si bajamos más de 50px, ocultamos el menú
+    // Si bajamos mas de 50px, ocultamos el menu
     if (scrollTop > this.lastScrollTop && scrollTop > 50) {
       this.isHidden.set(true);
-      this.isMobileMenuOpen.set(false); // Cerramos el menú móvil al hacer scroll
+      this.isMobileMenuOpen.set(false); // Cerramos el menu movil al hacer scroll
     }
     // Si subimos, lo mostramos
     else if (scrollTop < this.lastScrollTop) {
       this.isHidden.set(false);
     }
 
-    // Evitamos valores negativos en iOS (efecto rebote)
+    // Evitamos valores negativos
     this.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   }
 
-  // Función para alternar el menú móvil
+  // Funcion para alternar el menu movil
   toggleMenuMovil(): void {
     this.isMobileMenuOpen.update(estado => {
       const newState = !estado;
@@ -95,9 +95,9 @@ export class Menu{
     });
   }
 
-  // NUEVA FUNCIÓN: Cierre seguro y absoluto
+  // Cierre seguro
   cerrarMenuMovil(): void {
-    // Solo hacemos algo si el menú está realmente abierto
+    // Solo hacemos algo si el menu esta abierto
     if (this.isMobileMenuOpen()) {
       this.isMobileMenuOpen.set(false); // Lo forzamos a falso
       document.body.classList.remove('overflow-hidden'); // Desbloqueamos el scroll

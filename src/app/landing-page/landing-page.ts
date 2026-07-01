@@ -23,7 +23,6 @@ import { CardBoxIzq } from "./card-box-izq/card-box-izq";
 })
 export class LandingPage implements OnDestroy {
 
-  // 1. Inyección limpia sin constructores
   private ngZone = inject(NgZone);
   private context!: gsap.Context;
 
@@ -44,7 +43,7 @@ export class LandingPage implements OnDestroy {
 
       gsap.set('#page-wrapper', { backgroundColor: '#ffffff' });
 
-      // Cambio de color de fondo fluido del contenedor principal
+      // Cambio de color de fondo. Contenedor principal
       gsap.to('#page-wrapper', {
         backgroundColor: '#E5E5E5',
         ease: "none",
