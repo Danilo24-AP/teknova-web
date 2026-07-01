@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@reference 'tailwindcss';
 
 .recuadro{
     @apply rounded-[35px] sm:rounded-[55px] bg-white overflow-hidden w-full h-260 lg:h-237.5 mt-15 md:mt-20 lg:mt-42.5
