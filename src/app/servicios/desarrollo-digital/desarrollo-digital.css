@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+
+.titulo-servicios{
+    line-height: 120%;
+    align-items: center; 
+    letter-spacing: -0.03em;
+
+}
+
+.subtitulo-servicios{
+    line-height: 115%;
+    @apply text-[15px] md:text-[18px] lg:text-[21px]
+}
+
+.btn-dg{
+    @apply lg:px-6 lg:py-2 md:px-5 md:py-2 px-2 py-2 underline text-[12px] md:text-[15px] lg:text-lg bg-black text-white text-center rounded-4xl
+}

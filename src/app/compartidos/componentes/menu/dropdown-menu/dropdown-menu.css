@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+
+.formato-boton-menu{
+    @apply cursor-pointer px-4 py-2 hover:bg-gray-200 rounded-xl transition-colors duration-300 ease-out outline-none focus:outline-none
+}
+
+.diseño-servicios{
+    @apply flex flex-col gap-1 p-3 rounded-xl hover:bg-gray-50 transition-colors cursor-pointer
+}

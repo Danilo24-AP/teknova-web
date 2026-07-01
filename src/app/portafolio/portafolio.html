@@ -1,0 +1,42 @@
+
+<div class="mt-0 ">
+    <div class="flex flex-col min-h-[70vh] lg:min-h-[70vh] justify-center items-center 2xl:max-w-380 2xl:mx-auto">
+        <div class="mt-8 md:mt-10 px-[15%] md:px-[30%] text-center">
+            <h2 class="titulo-servicios poppins-bold text-[30px] md:text-[50px] lg:text-[75px]">
+                Creaciones TekNova Ing.
+            </h2>
+        </div>
+
+        <div class="text-center max-w-[80%] md:max-w-[30%] mt-3 md:mt-5">
+            <p class="poppins-medium subtitulo-servicios">Proyectos donde la forma y la función encuentran equilibrio.</p>
+        </div>
+    </div>
+
+    <div class="px-[3%] md:px-[5%] flex justify-end text-end items-end 2xl:max-w-380 2xl:mx-auto mb-35 md:mb-35 lg:mb-30">
+        <a [routerLink]="['/portafolio']"
+            fragment="carrusel-portafolio">
+            <img src="icono.png" alt="icono" class="w-15 h-15 md:w-20 md:h-20 p-1 bg-black">
+        </a>
+    </div>
+
+    <!-- SECCION DE PORTAFOLIOS -->
+    <app-seccion-ilustraciones [InicioIndicesIds]="0" [FinalIndicesIds]="2" id="landing-web-prueba"></app-seccion-ilustraciones>
+    
+    <!-- SECCION BACKGROUND -->
+    <app-seccion-background></app-seccion-background>
+
+    <!-- SECCION DOS DE PORTAFOLIOS -->
+    <app-seccion-ilustraciones [InicioIndicesIds]="1" [FinalIndicesIds]="2"></app-seccion-ilustraciones>
+
+    <!-- SECCION CARRUSEL -->
+    <div id="carrusel-portafolio">
+        @defer (on viewport) {
+            <app-seccion-carrusel></app-seccion-carrusel>
+        } @placeholder {
+            <div class="min-h-90 w-full"></div>
+        }
+    </div>
+    
+</div>
+
+<app-footer titulo="Ver Servicios" rutaUno="/servicios" tituloDos="Contactanos" rutaDos="/contacto"></app-footer>

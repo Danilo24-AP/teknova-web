@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+
+.color-titulo{
+    @apply  transition-transform duration-300 hover:text-[#702E7D]
+}
+
+.footer{
+    width: 100%;
+}

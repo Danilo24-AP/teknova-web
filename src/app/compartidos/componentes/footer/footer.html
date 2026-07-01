@@ -1,0 +1,46 @@
+
+
+<div class="bg-[#121212] sm:pt-8 pb-10 footer">
+
+    <div class="lg:grid lg:grid-cols-2 sm:grid sm:grid-cols-2 items-center px-5">
+        <div class="flex justify-center md:justify-start items-center h-40 px-15">
+            <a [routerLink]="rutaUno()"
+                class="text-white color-titulo poppins-semibold text-center md:text-start text-[25px] sm:text-[20px] lg:text-[45px] md:text-[35px]">{{titulo()}}</a>
+        </div>
+
+        <div class="flex border-t sm:border-l sm:border-t-0 border-white justify-center md:justify-start items-center h-40 px-15">
+            <a [routerLink]="'/' + rutaDos()"
+                class="text-white color-titulo poppins-semibold text-center md:text-start text-[25px] sm:text-[20px] lg:text-[45px] md:text-[35px]">{{tituloDos()}}</a>
+        </div>
+    </div>
+
+    <div class="flex flex-col lg:grid lg:grid-cols-3 items-center mt-1 sm:mt-8 border-t border-white px-5">
+        
+        <div class="flex justify-center items-center gap-3 lg:gap-x-10 pt-8">
+            <a routerLink="/" class="flex flex-col justify-center items-center">
+                <img src="icono.png" alt="icono.png" class="w-20 h-auto">
+                <h5 class="poppins-medium text-white font-bold">TekNova Ing.</h5>
+            </a>
+
+            <p class="poppins-light text-[10px] md:text-[15px] text-white max-w-[40%]">© 2026 Teknova Ing. Todos los derechos reservados</p>
+        </div>
+
+        <div class="flex gap-10 justify-center items-center pt-8">
+
+            <!-- Instagram -->
+            <i class="fa-brands fa-instagram text-white rounded-full text-5xl"></i>
+
+            <!-- WhatsApp -->
+            <i class="fa-brands fa-whatsapp text-green-500 text-5xl "></i>
+
+            <!-- X (Twitter) -->
+            <i class="fa-brands fa-x-twitter text-white text-5xl"></i>
+        </div>
+
+        <div class="pt-8 flex flex-col justify-center items-center">
+            <a href="mailto:contacto@teknovaing.com" class="text-white poppins-medium">e: contacto@teknovaing.com</a>
+            <a href="mailto:soporte@teknovaing.com" class="text-white poppins-medium">e: soporte@teknovaing.com</a>
+        </div>
+    </div>
+    
+</div>

@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+.titulo-about-us{
+    line-height: 120%;
+    align-items: center;
+    text-align: center;    
+    letter-spacing: -0.03em;
+
+    @apply px-10 lg:px-25 text-[45px] md:text-[65px] lg:text-[85px]
+}
+
+.subtitulo-about-us{
+    line-height: 115%;
+}
+
+.tipo-texto{
+    display: inline-block;
+    letter-spacing: -0.02em;
+    white-space: nowrap; /* Evita que el texto salte de línea mientras se escribe */
+}

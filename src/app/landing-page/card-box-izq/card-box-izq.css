@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+/* SECCION DE CUADROS PORTADA IZQUIERDA*/
+
+
+.posicionIzqArriba{
+  @apply absolute lg:left-[1%] top-[7%] xl:left-[1%] -rotate-3
+}
+/* ----- */
+.posicionIzqMedio{
+  @apply absolute lg:left-[8%] top-[30%] xl:left-[8%] -rotate-6
+}
+/* ----- */
+.posicionIzqAbajo{
+  @apply absolute lg:left-[5%] top-[60%] xl:left-[5%] rotate-7
+}
+
+.recuadroIzq{
+  @apply bg-white p-4 w-50 h-45 rounded-3xl shadow-xl border-3 border-gray-100 text-center justify-center
+}

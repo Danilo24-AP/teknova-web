@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+.titulo-servicios{
+    line-height: 120%;
+    align-items: center; 
+    letter-spacing: -0.03em;
+}
+
+.subtitulo-servicios{
+    line-height: 115%;
+    @apply text-[15px] md:text-[18px] lg:text-[21px]
+}
+
+.btn-secciones{
+    @apply px-8 py-3 rounded-[80px] hover:bg-black hover:text-white transition duration-100 ease-in-out text-left cursor-pointer;
+}
+
+.btn-activo {
+    @apply bg-black text-white;
+}

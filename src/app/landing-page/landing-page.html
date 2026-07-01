@@ -1,0 +1,74 @@
+
+<!-- SECCIÓN PORTADA -->
+<div class="2xl:max-w-380 mx-auto md:mt-10 lg:mt-0">
+  <div class="relative w-full grid grid-cols-4 min-h-[93vh] xl:min-h-166 2xl:min-h-165 items-center justify-center">
+    
+    <!-- Cuadros Izquierda -->
+    <div class="hidden lg:block">
+      <app-card-box-izq></app-card-box-izq>
+    </div>
+
+    <!-- TÍTULO CENTRAL -->
+    <div class="text-center z-10 col-span-4 lg:col-span-2">
+      <div class="titulo-central mx-5 sm:mx-0">
+        <p class=" text-[50px] md:text-[55px] lg:text-[75px] font-black poppins-bold tracking-tighter">
+          Impulsa tu<br>visión con Teknova
+        </p>
+      </div>
+      <div class="lg:max-w-2xl mx-5 md:mx-10 lg:mx-auto pt-5 flex justify-center">
+        <p class="poppins-light text-gray-800 text-[20px] lg:text-[25px]">Soporte tecnico, Instalación de camaras, Desarrollo web y movil, Instalacion de puntos de red y mucho mas.</p>
+      </div>
+    
+        <!-- BOTON CENTRAL -->
+      <div class="text-center">
+        <button class="btn-portada poppins-semibold" routerLink="/servicios">
+          Explorar Servicios
+        </button>
+      </div>
+
+      <div class="poppins-medium text-[16px] md:text-[20px] mt-10">
+        <p>¡Soluciones simples, resultados grandes!</p>
+      </div>
+
+    </div>
+
+    <!-- Cuadros Derecha -->
+    <div class="hidden lg:block">
+      <app-card-box-drh></app-card-box-drh>
+    </div>
+  </div>
+  
+  <app-seccion-uno></app-seccion-uno>
+
+  @defer (on viewport) {
+    <app-seccion-dos></app-seccion-dos>
+  } @placeholder {
+    <div class="min-h-50 w-full"></div>
+  }
+
+  @defer (on viewport) {
+  <app-seccion-tres></app-seccion-tres>
+  } @placeholder {
+    <div class="min-h-50 w-full"></div>
+  }
+</div>
+
+@defer (on viewport) {
+<app-seccion-cuatro></app-seccion-cuatro>
+} @placeholder {
+    <div class="min-h-50 w-full"></div>
+  }
+
+@defer (on viewport) {
+<app-seccion-seis></app-seccion-seis>
+} @placeholder {
+    <div class="min-h-50 w-full"></div>
+  }
+
+@defer (on viewport) {
+<!-- SECCION CONTACTO -->
+<app-seccion-siete></app-seccion-siete>
+} @placeholder {
+    <div class="min-h-90 w-full"></div>
+  }
+<app-footer titulo="Nuestros Servicios" rutaUno="/servicios" tituloDos="Ver Portafolios" rutaDos="/portafolio"></app-footer>

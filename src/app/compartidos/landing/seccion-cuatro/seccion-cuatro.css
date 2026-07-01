@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+
+.titulo-scuatro{
+    line-height: 120%;
+    align-items: center;
+    text-align: center;    
+    letter-spacing: -0.03em;
+
+    @apply lg:mx-10 lg:text-[55px] md:text-[40px] text-[35px]
+
+}
+
+.subtitulo-scuatro{
+    line-height: 120%;
+}
+
+.icono{
+    @apply text-[50px] w-auto h-auto
+}

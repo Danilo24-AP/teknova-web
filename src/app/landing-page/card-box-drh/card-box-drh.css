@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+
+/* SECCION DE CUADROS PORTADA DERECHA*/
+
+.posicionDchArriba{
+  @apply absolute lg:right-[8%] xl:right-[8%] top-[7%] rotate-5
+}
+/* ----- */
+.posicionDchMedio{
+  @apply absolute lg:right-[-1%] xl:right-[-1%] top-[33%] rotate-5
+}
+/* ----- */
+.posicionDchAbajo{
+  @apply absolute lg:right-[8%] xl:right-[8%] top-[60%] -rotate-6
+}
+
+.recuadroDch{
+  @apply bg-white p-4 w-50 h-45 rounded-3xl shadow-xl border-3 border-gray-100 text-center justify-center
+}

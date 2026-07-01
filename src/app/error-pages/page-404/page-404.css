@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+
+:host {
+    display: block;
+    width: 100%;
+}
+
+.titulo-404 {
+    line-height: 100%;
+    letter-spacing: -0.05em;
+    @apply text-[120px] md:text-[180px] lg:text-[220px] text-transparent bg-clip-text bg-linear-to-r from-[#702E7D] to-[#121212];
+}
+
+.btn-volver {
+    @apply mt-8 px-10 py-4 rounded-[50px] bg-[#121212] text-white text-[16px] md:text-[18px] transition duration-300 ease-in-out hover:bg-[#702E7D] hover:-translate-y-1 hover:shadow-xl inline-block;
+}

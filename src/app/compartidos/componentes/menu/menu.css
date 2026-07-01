@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+
+nav{
+
+    font-size: 15.5px;
+    /* agregamos clases para mantener el header fijo y poder sacarlo cada vez que hacemos scroll hacia arriba  (todo despues del fixed) */
+    @apply px-4 lg:px-6 h-18 flex justify-between lg:grid lg:grid-cols-3 bg-white fixed top-0 left-0 w-full transition-transform duration-300 z-50 items-center
+}
+
+nav.nav-oculto{
+    transform: translateY(-100%);
+    @apply shadow-md
+}
+
+.formato-boton-menu{
+    @apply cursor-pointer px-4 py-2 hover:bg-gray-200 rounded-xl transition-colors duration-300 ease-out outline-none focus:outline-none
+}
+
+.icono{
+    width: 60px;
+    height: fit-content;
+    @apply lg:w-17.5
+}
+
+.fondo-contacto{
+    @apply cursor-pointer py-4 lg:px-4 lg:py-2 rounded-xl bg-[#702E7D] transition-colors duration-300 ease-out hover:bg-[#6A2976] 
+}
+
+.formato-boton-movil{
+    @apply text-[17px] py-2 border-b border-gray-300
+}

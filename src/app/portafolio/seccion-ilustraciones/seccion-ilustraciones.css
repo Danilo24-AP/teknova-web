@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+
+.titulo-si{
+    line-height: 120%;
+    align-items: center; 
+    letter-spacing: -0.03em;
+}
+
+.subtitulo-si{
+    line-height: 115%;
+    @apply text-[15px] md:text-[18px] lg:text-[21px]
+}
+
+.etiquetas{
+    @apply text-[10px] md:text-[13px] lg:text-[16px]
+}
+
+.morado{
+    @apply bg-[#702E7D] text-white
+}
+
+.negro{
+    @apply bg-black text-white
+}

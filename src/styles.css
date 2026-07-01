@@ -1,1 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'tailwindcss';
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    color-scheme: light;
+    /* Hacemos que el body ocupe al menos el 100% de la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; /* OBLIGATORIO: 100% de la altura de la pantalla */
+
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* .poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+} */
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.color-morado{
+    color: #702E7D;
+}
+
+.color-cyan{
+  color: #03BACA
+}
+
+.color-gris{
+  color: #818181
+}

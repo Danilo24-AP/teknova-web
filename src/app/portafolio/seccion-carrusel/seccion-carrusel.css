@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+
+.titulo-sc{
+    line-height: 100%;
+    align-items: center; 
+    letter-spacing: -0.03em;
+    @apply text-[25px] md:text-[50px]  text-center
+}
+
+.splide__list {
+  display: flex;
+  flex-direction: row;
+}
+
+/* ESTA ES LA CLAVE: Bloques con medidas reales en píxeles */
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.diseno-linea{
+    @apply border-b-3 border-transparent hover:border-b-3 hover:border-black transition-all duration-300 pb-5
+}
+
+.imgHover{
+  @apply transition-transform duration-300 hover:scale-110
+}
+
+.texto-parrafo{
+  line-height: 115%;
+  word-wrap: break-word; /* Rompe el texto si es muy largo */
+  white-space: normal;   /* Evita que se quede todo en una sola línea */
+  @apply text-[25px] inline-block
+}

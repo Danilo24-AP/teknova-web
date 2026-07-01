@@ -1,0 +1,79 @@
+
+<nav class="poppins-medium" [class.nav-oculto]="isHidden()">
+    
+    <!-- PARTE IZQUIERDA DEL MENU -->
+    <div class="hidden lg:flex gap-x-1 md:gap-x-2 justify-start items-center">
+        
+        <a class="formato-boton-menu poppins-medium" routerLink="/faq">FAQ</a>
+
+        <app-dropdown-menu class="poppins-medium" titulo="Portafolio" 
+            [isOpen]="dropdownActivo() === 'portafolio'"
+            (mouseenter)="onMouseEnterDropdown('portafolio')"
+            (mouseleave)="onMouseLeaveDropdown()"
+            (clickBtn)="onClickDropdown('portafolio', $event)">
+
+            <app-contenido-down-portafolio></app-contenido-down-portafolio>
+        </app-dropdown-menu>
+
+        <app-dropdown-menu class="poppins-medium relative" titulo="Servicios" 
+            [isOpen]="dropdownActivo() === 'servicios'"
+            (mouseenter)="onMouseEnterDropdown('servicios')"
+            (mouseleave)="onMouseLeaveDropdown()"
+            (clickBtn)="onClickDropdown('servicios', $event)">
+            
+            <app-contenido-down-servicios></app-contenido-down-servicios>
+        </app-dropdown-menu>
+        
+    </div>
+
+    
+    <!-- PARTE CENTRAL DEL MENU -->
+    <div class="flex justify-start lg:justify-center items-center">
+        <a routerLink="/" (click)="cerrarMenuMovil()" class="flex justify-center items-center outline-none focus:outline-none">
+            <img class="icono" src="icono.png" alt="Logo Teknova Ing">
+
+            <div class="flex flex-col justify-center items-center">
+                <p class="text-3xl poppins-extrabold">TekNova Ing</p>
+                <p class="text-[10px] color-morado poppins-semibold">Soluciones Tecnológicas Integrales</p>   
+            </div>
+        </a>
+    </div>
+
+    
+    <!-- PARTE DERECHA DEL MENU -->
+    <div class="flex gap-x-3 justify-end items-center">
+        <div class="hidden lg:flex gap-x-3 items-center">
+            <a class="formato-boton-menu poppins-medium" routerLink="/sobre-nosotros">Sobre Nosotros</a>
+            <a routerLink="/contacto" class="fondo-contacto poppins-semibold text-white">Contacto</a>
+        </div>
+
+        <button class="lg:hidden p-2 text-black focus:outline-none rounded-lg hover:bg-gray-100 transition-colors" 
+                (click)="toggleMenuMovil()" 
+                aria-label="Abrir menú">
+            
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                      [attr.d]="isMobileMenuOpen() ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16m-7 6h7'"></path>
+            </svg>
+        </button>
+    </div>
+</nav>
+
+@if (isMobileMenuOpen()) {
+    <div class="fixed inset-0 top-18 bg-white z-40 lg:hidden flex flex-col p-6 gap-4 shadow-xl border-t border-gray-100 overflow-y-auto">
+        <a class="formato-boton-movil poppins-medium" routerLink="/faq" (click)="toggleMenuMovil()">FAQ</a>
+        <a class="formato-boton-movil poppins-medium" routerLink="/portafolio" (click)="toggleMenuMovil()">Portafolio</a>
+        <a class="formato-boton-movil poppins-medium" routerLink="/servicios" (click)="toggleMenuMovil()">Servicios</a>
+        <a class="formato-boton-movil poppins-medium" routerLink="/sobre-nosotros" (click)="toggleMenuMovil()">Sobre Nosotros</a>
+        
+        <div class="mt-6">
+            <a routerLink="/contacto" class="fondo-contacto poppins-semibold text-white text-center text-[17px] w-full block" (click)="toggleMenuMovil()">
+                Contacto
+            </a>
+        </div>
+
+        <div class="mt-auto">
+            <p class="poppins-light text-[15px]">© 2026 Teknova Ing. Todos los derechos reservados</p>
+        </div>
+    </div>
+}

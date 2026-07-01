@@ -1,0 +1,5 @@
+@import 'tailwindcss';
+
+.diseño-servicios{
+    @apply flex flex-col gap-1 p-3 rounded-xl hover:bg-gray-100 transition-colors cursor-pointer
+}

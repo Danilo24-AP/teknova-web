@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+.titulo-central{
+  line-height: 1.1;
+}
+.margen-laterales{
+  display: block;
+  margin: 0 0px;
+}
+
+.btn-portada{
+  @apply text-white mt-11 text-[15px] sm:text-[17px] lg:text-[20px] bg-[#702E7D] hover:bg-[#7c368a] px-8 py-5 md:px-10 md:py-6 rounded-[90px] cursor-pointer transition duration-300 ease-in-out
+}

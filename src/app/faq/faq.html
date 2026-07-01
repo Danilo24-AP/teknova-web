@@ -1,0 +1,45 @@
+
+<div class="mt-20 mb-30">
+
+    <div class="text-center">
+        <h2 class="titulo-faq poppins-bold">Preguntas frecuentes</h2>
+        <p class="subtitulo-faq text-[14px] md:text-[17px] lg:text-[20px] mt-5 poppins-regular">Si no puedes encontrar una respuesta a la que estás buscando, no dudes en echar un vistazo.</p>
+    </div>
+
+    <div class="flex flex-col md:flex-row gap-8 md:gap-10 lg:gap-15 items-center md:justify-center mx-10 md:mx-0 mt-15 mb-15 poppins-medium">
+        <a class="btn-recuadro poppins-medium text-[15px] md:text-[18px]" routerLink="/sobre-nosotros">Sobre TekNova Ing</a>
+        <a class="btn-recuadro poppins-medium text-[15px] md:text-[18px]" routerLink="/contacto">Contactanos</a>
+        <a class="btn-recuadro poppins-medium text-[15px] md:text-[18px]" routerLink="/servicios">Servicios TekNova</a>
+    </div>
+
+    @for (faq of panel; track $index) {
+        <div class="faq-contenedor margen-laterales">
+            <button class="faq-fondo" (click)="toggle(faq.id)" [attr.aria-expanded]="preguntaActiva() === faq.id">
+                <span class="faq-titulo poppins-semibold text-[14px] md:text-[17px] lg:text-[20px]">{{faq.titulo}}</span>
+                
+                <svg 
+                class="faq-icon w-5 h-5 md:w-8 md:h-8" 
+                [class.rotacion]="preguntaActiva() === faq.id"
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                stroke-width="2.5" 
+                stroke-linecap="round" 
+                stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+
+            <div class="acordeon-wrapper" [class.is-open]="preguntaActiva() === faq.id">
+                <div class="acordeon-inner">
+                    <div class="faq-body poppins-light text-[17px]">
+                        <p>{{faq.contenido}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+<app-footer titulo="Sobre Teknova Ing" rutaUno="/sobre-nosotros" tituloDos="Contactanos" rutaDos="/contacto"></app-footer>

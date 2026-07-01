@@ -1,0 +1,31 @@
+<div class="flex flex-col lg:flex-row w-full p-5 gap-2 lg:w-175 xl:w-180 lg:max-w-[70vw] xl:max-w-[100vw]">
+    <a class="md:w-[40%] relative h-60 rounded-2xl overflow-hidden flex flex-col justify-end cursor-pointer shadow-4xl group"
+        routerLink="/portafolio">
+        <div class="absolute inset-0 bg-gray-100/30 group-hover:bg-gray-200/60 transition-colors duration-300 delay-75"></div>
+        <div class="absolute inset-0 flex justify-center">
+            <img src="icono.png" alt="icono" class="w-38 h-38 object-cover ">
+        </div>
+        <div class="absolute inset-0 bg-gray-100/30 group-hover:bg-gray-200/0 transition-colors duration-300 delay-75"></div>
+        
+        <div class="relative p-5 flex flex-col md:gap-y-2 text-center">
+            <h2 class="poppins-bold text-[20px]">TekNova Ing</h2>
+            <p class="poppins-medium text-gray-800 text-[16px]">Soluciones Tecnologicas Integrales</p>
+        </div>
+    </a>
+
+    <div class="flex flex-wrap md:w-[60%] h-60">
+        <a [routerLink]="['/portafolio']" 
+            fragment="landing-web-prueba"
+            class="group flex flex-col gap-1 p-3 rounded-xl hover:bg-gray-100 transition-colors cursor-pointer">
+            <span class="text-[17px] poppins-bold group-hover:text-[#702E7D] transition-colors">Landings y diseños</span>
+            <span class="text-[14px] text-gray-500 poppins-medium leading-relaxed">Ofrecemos instalación de sistemas de red y equipos de cómputo.</span>
+        </a>
+
+        <a [routerLink]="['/portafolio']" 
+            fragment="estetica-web"
+            class="group flex flex-col gap-1 p-3 rounded-xl hover:bg-gray-100 transition-colors cursor-pointer">
+            <span class="text-[17px] poppins-bold group-hover:text-[#702E7D] transition-colors">Desarrollo web</span>
+            <span class="text-[14px] text-gray-500 poppins-medium leading-relaxed">Creamos sistemas web de alta calidad para aplicaciones web y mobile.</span>
+        </a>
+    </div>
+</div>

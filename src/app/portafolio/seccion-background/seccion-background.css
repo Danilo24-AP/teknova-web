@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+
+.titulo-sb{
+    line-height: 120%;
+    align-items: center; 
+    letter-spacing: -0.03em;
+}
+
+.subtitulo-sb{
+    line-height: 115%;
+    @apply text-[13px] md:text-[15px] lg:text-[20px]
+}

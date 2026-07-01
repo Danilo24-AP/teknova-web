@@ -1,0 +1,80 @@
+@import 'tailwindcss';
+
+.titulo-faq{
+    line-height: 120%;
+    align-items: center;
+    text-align: center;    
+    letter-spacing: -0.03em;
+
+    @apply px-4 sm:px-8 md:px-25 text-[50px] md:text-[65px] lg:text-[75px]
+}
+
+.subtitulo-faq{
+    line-height: 115%;
+    @apply px-10
+}
+
+.btn-recuadro{
+    @apply text-center w-50 md:w-auto px-5 py-4 md:px-8 md:py-4 border-2 border-[#7c368a] rounded-[80px] hover:text-white hover:bg-[#7c368a] transition duration-400 ease-in-out
+}
+
+/* Contenedor principal */
+.faq-contenedor {
+  transition: background-color 0.5s ease;
+  @apply bg-[#f4f4f5] rounded-2xl overflow-hidden;
+}
+
+.margen-laterales{
+  @apply mx-10 my-5 md:mx-15 md:my-6 lg:mx-62.5 lg:my-6.25
+}
+
+.faq-fondo {
+  @apply w-full flex justify-between items-center p-6 bg-none border-none cursor-pointer text-left outline-none;
+}
+
+/* Estilo del título/pregunta */
+.faq-titulo {
+  line-height: 1.4;
+}
+
+/* Icono y su animación de rotación */
+.faq-icon {
+  flex-shrink: 0; /* Evita que el icono se reduzca de tamaño */
+
+  @apply ml-4 transition-transform duration-400 ease-in-out text-[#121212]
+}
+
+.faq-icon.rotacion {
+  transform: rotate(180deg); /* Gira la flecha hacia arriba */
+}
+
+/* Contenido de la respuesta */
+.faq-body {
+  padding: 0 24px 24px 24px; /* Mismo padding lateral y fondo */
+  line-height: 1.5;
+}
+
+.faq-body p {
+  margin: 0;
+}
+
+
+/* ANIMACION DE SLIDE DOWN - UP */
+
+.acordeon-wrapper{
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s ease-in-out;
+}
+
+.acordeon-wrapper.is-open{
+  grid-template-rows: 1fr;
+}
+
+.acordeon-inner{
+  overflow: hidden;
+}
+
+
+
+

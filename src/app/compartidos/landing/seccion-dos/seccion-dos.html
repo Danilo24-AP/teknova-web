@@ -1,0 +1,67 @@
+<div class="w-full mt-50 pb-20">
+  <div class="text-center justify-center pb-8 px-7 md:px-25 lg:px-0">
+    <h1 class="text-[35px] sm:text-[40px] lg:text-[50px] poppins-semibold">Algunos de nuestros trabajos recientes:</h1>
+  </div>
+  <div class="splide" #carrusel>
+    <div class="splide__track">
+      <ul class="splide__list ">
+
+        
+          @for (proyecto of proyectos(); track proyecto.id) {
+            <li class="splide__slide">
+              <!-- Slide 1 -->
+              @if(proyecto.variante === 'estandar'){
+                <div class="cursor-pointer card-wrapper">
+                    <div class="relative w-[85vw] md:w-75 h-75 overflow-hidden rounded-4xl">
+                      <img [ngSrc]="proyecto.imagenUrl" 
+                      fill
+                      alt="img-porft" 
+                      class="imgHover cursor-pointer object-cover rounded-4xl" />
+                    </div>
+                    <div class="pt-8 pb-8">
+                      <a class="poppins-medium border rounded-4xl px-6 py-3 text-[15px]">{{proyecto.etiqueta}}</a>
+                    </div>
+                    <p class="poppins-medium texto-parrafo max-w-65">{{proyecto.texto}}</p>
+                </div>
+              }
+              <!-- Slide 2 -->
+              @if(proyecto.variante === 'alto'){
+                <div class="cursor-pointer card-wrapper">
+                  <div class="relative w-[85vw] md:w-75 h-105 overflow-hidden rounded-4xl">
+                    <img [ngSrc]="proyecto.imagenUrl" 
+                    fill
+                    alt="img-porft"
+                    class="imgHover w-full h-full object-cover cursor-pointer rounded-4xl" />
+                  </div>
+                  <div class="pt-8 pb-8">
+                    <a class="poppins-medium border rounded-4xl px-6 py-3 text-[15px]">{{proyecto.etiqueta}}</a>
+                  </div>
+                  <div class="max-w-65 texto-parrafo">
+                    <p class="poppins-medium">{{proyecto.texto}}</p>
+                  </div>
+                </div>
+              }
+              <!-- Slide 3 -->
+              @if(proyecto.variante === 'ancho'){
+                <div class="cursor-pointer card-wrapper">
+                  <div class="relative w-120 h-75 overflow-hidden rounded-4xl">
+                    <img [ngSrc]="proyecto.imagenUrl" 
+                    fill
+                    alt="img-porft" 
+                    class="imgHover w-full cursor-pointer object-cover rounded-4xl" />
+                  </div>
+                  <div class="pt-8 pb-8">
+                    <a class="poppins-medium border rounded-4xl px-6 py-3 text-[15px]">{{proyecto.etiqueta}}</a>
+                  </div>
+                  <div class="max-w-115">
+                    <p class="poppins-medium texto-parrafo">{{proyecto.texto}}</p>
+                  </div>
+                </div>
+              }
+            </li>
+          }
+
+      </ul>
+    </div>
+  </div>
+</div>

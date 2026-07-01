@@ -1,0 +1,26 @@
+
+<div class="relative inline-block">
+
+    <button
+    (click)="onclick($event)"
+    class="formato-boton-menu flex items-center gap-1 relative"
+    [class.bg-gray-100]="isOpen()"
+    [attr.aria-expanded]="isOpen()">
+
+        {{titulo}}
+
+        <svg class="w-4 h-4 transition-transform duration-200" 
+            [class.rotate-180]="isOpen()"
+            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+
+    @if(isOpen()){
+        <div class="absolute top-full pt-8 left-0 z-50 w-max">
+            <div class="w-full bg-white shadow-2xl border rounded-2xl border-gray-300">
+                <ng-content></ng-content>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+
+.titulo-servicios{
+    line-height: 120%;
+    align-items: center; 
+    letter-spacing: -0.03em;
+}
+
+.subtitulo-servicios{
+    line-height: 115%;
+    @apply text-[15px] md:text-[18px] lg:text-[21px]
+}
