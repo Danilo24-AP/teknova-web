@@ -71,7 +71,7 @@
     @if (seccionActiva() === 'todo' || seccionActiva() === 'soporte') {
         <!-- SECCION SOPORTE TECNICO -->
         <div id="soporte-tecnico">
-            @defer (on viewport) {
+            @defer (on viewport; prefetch on idle) {
             <app-soporte-tecnico></app-soporte-tecnico>
             } @placeholder {
                 <div class="min-h-100 w-full"></div>
@@ -82,7 +82,7 @@
     @if (seccionActiva() === 'todo' || seccionActiva() === 'cctv'){
         <!-- SECCION SISTEMA CCTV -->
         <div id="sistemas-cctv">
-            @defer (on viewport) {
+            @defer (on viewport; prefetch on idle) {
             <app-sistemas-cctv></app-sistemas-cctv>
             } @placeholder {
                 <div class="min-h-100 w-full"></div>
@@ -93,7 +93,7 @@
     @if (seccionActiva() === 'todo' || seccionActiva() === 'software'){
         <!-- SECCION DE SOFTWARE A MEDIDA -->
         <div id="software-medida">
-            @defer (on viewport) {
+            @defer (on viewport; prefetch on idle) {
             <app-software-medida></app-software-medida>
             } @placeholder {
                     <div class="min-h-100 w-full"></div>
