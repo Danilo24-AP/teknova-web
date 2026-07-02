@@ -20,6 +20,10 @@ body{
 
 }
 
+img {
+  transition: opacity 0.5s ease-in-out;
+}
+
 .poppins-light {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
