@@ -13,10 +13,10 @@
                     <li class="splide__slide">
                             @if (proyecto.variante === "estandar") {
                                <div class="card-wrapper">
-                                    <div class="relative w-[85vw] md:w-85 h-80 border overflow-hidden">
+                                    <div class="relative w-50 h-50 md:w-85 md:h-80 border overflow-hidden">
                                         <img [src]=" assetsPath + proyecto.imagenUrl"
                                         alt="img-porft-{{proyecto.id}}"
-                                        class="imgHover object-contain" />
+                                        class="imgHover object-contain h-full" />
                                     </div>
 
                                     <div class="texto-parrafo mt-5 diseno-linea">
@@ -30,7 +30,7 @@
                             <!-- Slide 2 -->
                             @if (proyecto.variante === 'alto') {
                                <div class="card-wrapper">
-                                    <div class="relative w-[85vw] md:w-75 h-105 border overflow-hidden">
+                                    <div class="relative w-50 h-70 md:w-75 md:h-105 border overflow-hidden">
                                         <img [src]="assetsPath + proyecto.imagenUrl"
                                         alt="img-porft-{{proyecto.id}}"
                                         class="imgHover object-cover w-full h-full"/>
@@ -47,7 +47,7 @@
                             <!-- Slide 3 -->
                             @if (proyecto.variante === "ancho") {
                                 <div class="card-wrapper">
-                                    <div class="relative w-120 h-80 border overflow-hidden">
+                                    <div class="relative w-80 h-50 md:w-120 md:h-80 border overflow-hidden">
                                         <img [src]="assetsPath + proyecto.imagenUrl"
                                         alt="img-porft-{{proyecto.id}}"
                                         class="imgHover object-cover w-full h-full" />

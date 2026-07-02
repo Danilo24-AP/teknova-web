@@ -15,7 +15,7 @@
 }
 
 .btn-recuadro{
-    @apply text-center w-50 md:w-auto px-5 py-4 md:px-8 md:py-4 border-2 border-[#7c368a] rounded-[80px] hover:text-white hover:bg-[#7c368a] transition duration-400 ease-in-out
+    @apply text-center w-50 md:w-auto px-5 py-4 md:px-8 md:py-4 border-2 border-[#7c368a] rounded-[80px] hover:text-white hover:bg-[#7c368a] active:text-white active:bg-[#7c368a] transition-all duration-400 ease-in-out
 }
 
 /* Contenedor principal */

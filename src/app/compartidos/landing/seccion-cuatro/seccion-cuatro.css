@@ -6,7 +6,7 @@
     text-align: center;    
     letter-spacing: -0.03em;
 
-    @apply lg:mx-10 lg:text-[55px] md:text-[40px] text-[35px]
+    @apply lg:mx-10 lg:text-[55px] md:text-[40px] text-[25px]
 
 }
 

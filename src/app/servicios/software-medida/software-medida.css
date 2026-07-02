@@ -8,5 +8,5 @@
 
 .subtitulo-servicios{
     line-height: 115%;
-    @apply text-[15px] md:text-[18px] lg:text-[21px]
+    @apply text-[16px] md:text-[18px] lg:text-[21px]
 }

@@ -1,7 +1,7 @@
 @reference 'tailwindcss';
 
 .color-titulo{
-    @apply  transition-transform duration-300 hover:text-[#702E7D]
+    @apply  transition-transform duration-300 hover:text-[#702E7D] active:text-[#702E7D] ease-in-out;
 }
 
 .footer{

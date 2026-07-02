@@ -98,7 +98,7 @@ export class SeccionDos implements OnDestroy{
       type: 'loop',        // Bucle infinito continuo
       clones: 8,
       autoWidth: true,
-      gap: '60px',         
+      gap: '55px',         
       arrows: false,       // Oculta flechas
       pagination: false,   // Oculta puntos
       // direction: 'ltr', // <--- FORZA EL COMPORTAMIENTO HORIZONTAL ESTÁNDAR
@@ -106,7 +106,7 @@ export class SeccionDos implements OnDestroy{
       // RESPONSIVE: Ajustes nativos de comportamiento según pantalla
       breakpoints: {
         768: {
-          gap: '70px', // Espacio original de 70px en computadores
+          gap: '40px', // Espacio original de 70px en computadores
         },
         1200:{
           gap: '70px',

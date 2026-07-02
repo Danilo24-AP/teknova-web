@@ -1,18 +1,17 @@
 <div class="w-full mt-50 pb-20">
-  <div class="text-center justify-center pb-8 px-7 md:px-25 lg:px-0">
-    <h1 class="text-[35px] sm:text-[40px] lg:text-[50px] poppins-semibold">Algunos de nuestros trabajos recientes:</h1>
+  <div class="text-center justify-center pb-8 px-4 sm:px-7 md:px-25 lg:px-0">
+    <h1 class="text-[25px] sm:text-[40px] lg:text-[50px] poppins-semibold">Algunos de nuestros trabajos recientes:</h1>
   </div>
   <div class="splide" #carrusel>
     <div class="splide__track">
       <ul class="splide__list ">
 
-        
           @for (proyecto of proyectos(); track proyecto.id) {
             <li class="splide__slide">
               <!-- Slide 1 -->
               @if(proyecto.variante === 'estandar'){
                 <div class="cursor-pointer card-wrapper">
-                    <div class="relative w-[85vw] md:w-75 h-75 overflow-hidden rounded-4xl">
+                    <div class="relative w-50 h-50 md:w-75 md:h-75 overflow-hidden rounded-4xl">
                       <img [src]="assetsPath + proyecto.imagenUrl" 
                       alt="img-porft" 
                       class="imgHover cursor-pointer object-cover rounded-4xl" />
@@ -26,7 +25,7 @@
               <!-- Slide 2 -->
               @if(proyecto.variante === 'alto'){
                 <div class="cursor-pointer card-wrapper">
-                  <div class="relative w-[85vw] md:w-75 h-105 overflow-hidden rounded-4xl">
+                  <div class="relative w-50 h-70 md:w-75 md:h-105 overflow-hidden rounded-4xl">
                     <img [src]="assetsPath + proyecto.imagenUrl" 
                     alt="img-porft"
                     class="imgHover w-full h-full object-cover cursor-pointer rounded-4xl" />
@@ -42,7 +41,7 @@
               <!-- Slide 3 -->
               @if(proyecto.variante === 'ancho'){
                 <div class="cursor-pointer card-wrapper">
-                  <div class="relative w-120 h-75 overflow-hidden rounded-4xl">
+                  <div class="relative w-80 h-50 md:w-120 md:h-75 overflow-hidden rounded-4xl">
                     <img [src]="assetsPath + proyecto.imagenUrl" 
                     alt="img-porft" 
                     class="imgHover w-full h-full cursor-pointer object-cover rounded-4xl" />

@@ -1,9 +1,8 @@
 @reference 'tailwindcss';
 
 .recuadro{
-    @apply rounded-[35px] sm:rounded-[55px] bg-white overflow-hidden w-full h-260 lg:h-237.5 mt-15 md:mt-20 lg:mt-42.5
+    @apply rounded-[20px] sm:rounded-[55px] bg-white overflow-hidden w-full h-260 lg:h-237.5 mt-15 md:mt-20 lg:mt-42.5
 }
-
 
 .frase-gris{
     padding-top: 70px;
@@ -12,11 +11,10 @@
 
 .titulo-digital{
     line-height: 120%;
-    align-items: center;
-    text-align: center;    
+    align-items: center;  
     letter-spacing: -0.03em;
 
-    @apply text-[35px] md:text-[45px] lg:text-[55px] px-10 md:px-18.75
+    @apply text-[25px] md:text-[45px] lg:text-[55px] px-6 md:px-18.75 text-center
 }
 
 .subtitulo-digital{

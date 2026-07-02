@@ -7,11 +7,11 @@
     text-align: center;    
     letter-spacing: -0.03em;
 
-    @apply lg:text-[55px] md:text-[40px] text-[35px] px-10 md:px-0 lg:px-25
+    @apply lg:text-[55px] md:text-[40px] text-[25px] px-6 sm:px-10 md:px-0 lg:px-25
 }
 
 .subtitulo-sseis{
     line-height: 120%;
 
-    @apply px-8 sm:px-17.5 lg:max-w-[65%] lg:mx-auto lg:px-0
+    @apply px-4 md:px-8 sm:px-17.5 lg:max-w-[65%] lg:mx-auto lg:px-0
 }

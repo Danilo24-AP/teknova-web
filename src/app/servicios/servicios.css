@@ -12,7 +12,7 @@
 }
 
 .btn-secciones{
-    @apply px-8 py-3 rounded-[80px] hover:bg-black hover:text-white transition duration-100 ease-in-out text-left cursor-pointer;
+    @apply px-8 py-3 rounded-[80px] hover:bg-black active:bg-black active:text-white hover:text-white transition-all duration-100 ease-in-out text-left cursor-pointer;
 }
 
 .btn-activo {
