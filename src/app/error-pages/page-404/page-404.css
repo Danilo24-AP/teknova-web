@@ -12,5 +12,5 @@
 }
 
 .btn-volver {
-    @apply mt-8 px-10 py-4 rounded-[50px] bg-[#121212] text-white text-[16px] md:text-[18px] transition duration-300 ease-in-out hover:bg-[#702E7D] hover:-translate-y-1 hover:shadow-xl inline-block;
+    @apply mt-8 px-10 py-4 rounded-[50px] bg-[#121212] text-white text-[16px] md:text-[18px] transition-all duration-300 ease-in-out hover:bg-[#702E7D] hover:-translate-y-1 hover:shadow-xl active:bg-[#702E7D] active:-translate-y-1 active:shadow-xl inline-block;
 }

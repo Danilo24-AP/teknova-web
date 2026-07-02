@@ -17,9 +17,9 @@ nav.nav-oculto{
 }
 
 .icono{
-    width: 60px;
+    width: 50px;
     height: fit-content;
-    @apply lg:w-17.5
+    @apply sm:w-15 lg:w-17.5
 }
 
 .fondo-contacto{

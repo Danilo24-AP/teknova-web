@@ -30,5 +30,5 @@
   line-height: 115%;
   word-wrap: break-word; /* Rompe el texto si es muy largo */
   white-space: normal;   /* Evita que se quede todo en una sola línea */
-  @apply text-[25px] inline-block transition-all duration-300
+  @apply text-[16px] md:text-[25px] inline-block transition-all duration-300
 }
