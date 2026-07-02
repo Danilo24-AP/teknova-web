@@ -30,7 +30,17 @@
 
     <!-- SECCION CARRUSEL -->
     <div id="carrusel-portafolio">
-        <app-seccion-carrusel></app-seccion-carrusel>
+        @defer (on viewport; prefetch on idle) {
+            <app-seccion-carrusel></app-seccion-carrusel>
+        } @placeholder {
+            <div class="flex gap-10 overflow-hidden py-4 w-full">
+    
+                <app-skeleton-card-carrusel />
+                <app-skeleton-card-carrusel class="hidden sm:block" />
+                <app-skeleton-card-carrusel class="hidden md:block" />
+                
+            </div>
+        }
     </div>
     
 </div>

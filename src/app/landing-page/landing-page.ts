@@ -11,12 +11,13 @@ import { SeccionSeis } from "../compartidos/landing/seccion-seis/seccion-seis";
 import { SeccionSiete } from '../compartidos/landing/seccion-siete/seccion-siete';
 import { CardBoxDrh } from "./card-box-drh/card-box-drh";
 import { CardBoxIzq } from "./card-box-izq/card-box-izq";
+import { SkeletonCardCarrusel } from '../compartidos/componentes/skeleton-card-carrusel/skeleton-card-carrusel';
 
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [RouterLink, SeccionUno, SeccionDos, SeccionTres, SeccionCuatro, SeccionSeis, SeccionSiete, Footer, CardBoxDrh, CardBoxIzq],
+  imports: [RouterLink, SeccionUno, SeccionDos, SkeletonCardCarrusel, SeccionTres, SeccionCuatro, SeccionSeis, SeccionSiete, Footer, CardBoxDrh, CardBoxIzq, SkeletonCardCarrusel],
   templateUrl: './landing-page.html',
   styleUrls: ['./landing-page.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
