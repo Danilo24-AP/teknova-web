@@ -96,7 +96,10 @@
             @defer (on viewport; prefetch on idle) {
             <app-software-medida></app-software-medida>
             } @placeholder {
-                    <div class="min-h-100 w-full"></div>
+                    <!-- PRUEBA "SKELETON" -->
+                    <div class="w-full min-h-125 bg-gray-100 animate-pulse rounded-2xl flex items-center justify-center">
+                        <span class="text-gray-400 poppins-regular">Cargando sección...</span>
+                    </div>
                 }
         </div>
     }
