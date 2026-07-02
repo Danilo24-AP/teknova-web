@@ -1,7 +1,7 @@
-import { NgOptimizedImage } from '@angular/common';
 import { afterNextRender, ChangeDetectionStrategy, Component, ElementRef, OnDestroy, signal, viewChild } from '@angular/core';
 import Splide from '@splidejs/splide';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+import { environment } from '../../../environments/environment';
 
 export type varianteSlide = 'estandar' | 'alto' | 'ancho';
 
@@ -15,43 +15,45 @@ export interface ProyectoSlide{
 
 @Component({
   selector: 'app-seccion-carrusel',
-  imports: [NgOptimizedImage],
+  imports: [],
   templateUrl: './seccion-carrusel.html',
   styleUrl: './seccion-carrusel.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SeccionCarrusel implements OnDestroy{
 
+  protected readonly assetsPath = environment.assetsUrl;
+
   proyectos = signal<ProyectoSlide[]>([
     {
       id: 1, 
-      imagenUrl: 'assets/img/websites-img/img-porft-1.jpg', 
+      imagenUrl: '/img/websites-img/img-porft-1.webp', 
       texto: 'We don\'t call them "customers" or transactions.',
       variante: 'estandar'
     },
     {
       id: 2, 
-      imagenUrl: 'assets/img/websites-img/img-porft-5.jpg', 
+      imagenUrl: '/img/websites-img/img-porft-5.webp', 
       texto: 'We don\'t call them "customers" or transactions.',
       variante: 'alto'
     },
     {
       id: 3, 
-      imagenUrl: 'assets/img/websites-img/img-porft-2.jpg', 
+      imagenUrl: '/img/websites-img/img-porft-2.webp', 
       texto: "We don't call them 'customers' or transactions. They are your supporters.",
       variante: 'ancho'
     },
 
     {
       id: 4, 
-      imagenUrl: 'assets/img/websites-img/img-porft-4.jpg', 
+      imagenUrl: '/img/websites-img/img-porft-4.webp', 
       texto: "We don't call them 'customers' or transactions. They are your supporters.",
       variante: 'alto'
     },
 
     {
       id: 5, 
-      imagenUrl: 'assets/img/websites-img/img-porft-3.png', 
+      imagenUrl: '/img/websites-img/img-porft-3.webp', 
       texto: "We don't call them 'customers' or transactions. They are your supporters.",
       variante: 'ancho'
     },

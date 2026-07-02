@@ -1,5 +1,5 @@
-import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, Input, signal } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 export type TemaColor = 'negro' | 'morado';
 
@@ -14,13 +14,14 @@ export interface Proyectos {
 
 @Component({
   selector: 'app-seccion-ilustraciones',
-  imports: [NgOptimizedImage],
+  imports: [],
   templateUrl: './seccion-ilustraciones.html',
   styleUrl: './seccion-ilustraciones.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SeccionIlustraciones {
 
+  protected readonly assetsPath = environment.assetsUrl;
 
   @Input({required:true})
   InicioIndicesIds!: number
@@ -34,7 +35,7 @@ export class SeccionIlustraciones {
       "titulo": "Landing Vibrante y Enfocada",
       "descripcion": "Una landing page moderna diseñada para captar atención y comunicar valor de forma inmediata. Combina ilustración, ritmo visual y una estructura clara que invita a la acción.",
       "etiquetas": ['Premium Design','Landing Page','UX Intuitivo','Full Custom','Responsive Layout'],
-      "imagenUrl": 'assets/img/portafolio/portafolio1.png',
+      "imagenUrl": '/img/portafolio/portafolio1.webp',
       "tema": 'negro'
     },
         {
@@ -42,7 +43,7 @@ export class SeccionIlustraciones {
       "titulo": "Diseño Minimalista con Carácter",
       "descripcion": "Página construida alrededor del equilibrio entre simplicidad y expresión. El espacio en blanco enfatiza cada elemento clave mientras la jerarquía visual guía al usuario sin esfuerzo.",
       "etiquetas": ['Minimal UI','Clean Grid','Adaptive Design','Modern Typography','High Readability'],
-      "imagenUrl": 'assets/img/portafolio/portafolio2.png',
+      "imagenUrl": '/img/portafolio/portafolio2.webp',
       "tema": 'morado'
     },
 

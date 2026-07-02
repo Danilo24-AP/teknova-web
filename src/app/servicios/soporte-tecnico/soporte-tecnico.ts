@@ -1,17 +1,18 @@
-import { NgOptimizedImage } from '@angular/common';
 import { afterNextRender, ChangeDetectionStrategy, Component, ElementRef, viewChild } from '@angular/core';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-soporte-tecnico',
-  imports: [NgOptimizedImage],
+  imports: [],
   templateUrl: './soporte-tecnico.html',
   styleUrl: './soporte-tecnico.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SoporteTecnico {
 
+  protected readonly assetsPath = environment.assetsUrl;
   private seccionAnimada = viewChild.required<ElementRef>('seccionAnimada');
 
   constructor(){

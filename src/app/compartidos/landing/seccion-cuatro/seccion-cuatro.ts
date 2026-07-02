@@ -1,4 +1,4 @@
-import { afterNextRender, ChangeDetectionStrategy, Component, ElementRef, inject, viewChild } from '@angular/core';
+import { afterNextRender, ChangeDetectionStrategy, Component, ElementRef, viewChild } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';

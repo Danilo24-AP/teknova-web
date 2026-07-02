@@ -1,18 +1,19 @@
-import { NgOptimizedImage } from '@angular/common';
 import { afterNextRender, ChangeDetectionStrategy, Component, ElementRef, inject, viewChild } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-seccion-tres',
-  imports: [MatIconModule, NgOptimizedImage],
+  imports: [MatIconModule],
   templateUrl: './seccion-tres.html',
   styleUrl: './seccion-tres.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SeccionTres {
 
+  protected readonly assetsPath = environment.assetsUrl;
   seccionAnimada = viewChild.required<ElementRef>('seccionAnimada');
 
   constructor(){

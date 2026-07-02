@@ -1,7 +1,7 @@
-import { NgOptimizedImage } from '@angular/common';
-import { Component, OnDestroy, ElementRef, ViewChild, afterNextRender, signal, ChangeDetectionStrategy, inject } from '@angular/core';
+import { Component, OnDestroy, ElementRef, ViewChild, afterNextRender, signal, ChangeDetectionStrategy } from '@angular/core';
 import { Splide } from '@splidejs/splide';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+import { environment } from '../../../../environments/environment';
 
 export type varianteSlide = 'estandar' | 'alto' | 'ancho';
 
@@ -16,31 +16,33 @@ export interface ProyectoSlide{
 
 @Component({
   selector: 'app-seccion-dos',
-  imports: [NgOptimizedImage],
+  imports: [],
   templateUrl: './seccion-dos.html',
   styleUrl: './seccion-dos.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SeccionDos implements OnDestroy{
 
+  protected readonly assetsPath = environment.assetsUrl;
+
   proyectos = signal<ProyectoSlide[]>([
     {
       id: 1, 
-      imagenUrl: 'assets/img/websites-img/img-porft-1.jpg',
+      imagenUrl: '/img/websites-img/img-porft-1.webp',
       etiqueta: 'Landing page',
       texto: 'We don\'t call them "customers" or transactions.',
       variante: 'estandar'
     },
     {
       id: 2, 
-      imagenUrl: 'assets/img/websites-img/img-porft-5.jpg',
+      imagenUrl: '/img/websites-img/img-porft-5.webp',
       etiqueta: 'E-commerce',
       texto: 'We don\'t call them "customers" or transactions.',
       variante: 'alto'
     },
     {
       id: 3, 
-      imagenUrl: 'assets/img/websites-img/img-porft-2.jpg',
+      imagenUrl: '/img/websites-img/img-porft-2.webp',
       etiqueta: 'Landing page',
       texto: "We don't call them 'customers' or transactions. They are your supporters.",
       variante: 'ancho'
@@ -48,7 +50,7 @@ export class SeccionDos implements OnDestroy{
 
     {
       id: 4, 
-      imagenUrl: 'assets/img/websites-img/img-porft-6.jpg',
+      imagenUrl: '/img/websites-img/img-porft-6.webp',
       etiqueta: 'Landing page',
       texto: 'We don\'t call them "customers" or transactions.',
       variante: 'estandar'
@@ -56,7 +58,7 @@ export class SeccionDos implements OnDestroy{
 
     {
       id: 5, 
-      imagenUrl: 'assets/img/websites-img/img-porft-3.png',
+      imagenUrl: '/img/websites-img/img-porft-3.webp',
       etiqueta: 'Landing page',
       texto: "We don't call them 'customers' or transactions. They are your supporters.",
       variante: 'ancho'
@@ -64,7 +66,7 @@ export class SeccionDos implements OnDestroy{
 
     {
       id: 6, 
-      imagenUrl: 'assets/img/websites-img/img-porft-7.jpg',
+      imagenUrl: '/img/websites-img/img-porft-7.webp',
       etiqueta: 'E-commerce',
       texto: 'We don\'t call them "customers" or transactions.',
       variante: 'alto'
@@ -72,7 +74,7 @@ export class SeccionDos implements OnDestroy{
 
     {
       id: 7, 
-      imagenUrl: 'assets/img/websites-img/img-porft-8.png',
+      imagenUrl: '/img/websites-img/img-porft-8.webp',
       etiqueta: 'E-commerce',
       texto: "We don't call them 'customers' or transactions. They are your supporters.",
       variante: 'ancho'

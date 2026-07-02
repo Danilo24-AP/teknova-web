@@ -1,16 +1,18 @@
-import { NgOptimizedImage } from '@angular/common';
 import { afterNextRender, ChangeDetectionStrategy, Component, ElementRef, viewChild } from '@angular/core';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-sistemas-cctv',
-  imports: [NgOptimizedImage],
+  imports: [],
   templateUrl: './sistemas-cctv.html',
   styleUrl: './sistemas-cctv.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SistemasCctv {
+
+  protected readonly assetsPath = environment.assetsUrl;
   private seccionAnimada = viewChild.required<ElementRef>('seccionAnimada');
 
   constructor(){

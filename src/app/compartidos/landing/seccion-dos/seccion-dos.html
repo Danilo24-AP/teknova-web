@@ -13,8 +13,7 @@
               @if(proyecto.variante === 'estandar'){
                 <div class="cursor-pointer card-wrapper">
                     <div class="relative w-[85vw] md:w-75 h-75 overflow-hidden rounded-4xl">
-                      <img [ngSrc]="proyecto.imagenUrl" 
-                      fill
+                      <img [src]="assetsPath + proyecto.imagenUrl" 
                       alt="img-porft" 
                       class="imgHover cursor-pointer object-cover rounded-4xl" />
                     </div>
@@ -28,8 +27,7 @@
               @if(proyecto.variante === 'alto'){
                 <div class="cursor-pointer card-wrapper">
                   <div class="relative w-[85vw] md:w-75 h-105 overflow-hidden rounded-4xl">
-                    <img [ngSrc]="proyecto.imagenUrl" 
-                    fill
+                    <img [src]="assetsPath + proyecto.imagenUrl" 
                     alt="img-porft"
                     class="imgHover w-full h-full object-cover cursor-pointer rounded-4xl" />
                   </div>
@@ -45,8 +43,7 @@
               @if(proyecto.variante === 'ancho'){
                 <div class="cursor-pointer card-wrapper">
                   <div class="relative w-120 h-75 overflow-hidden rounded-4xl">
-                    <img [ngSrc]="proyecto.imagenUrl" 
-                    fill
+                    <img [src]="assetsPath + proyecto.imagenUrl" 
                     alt="img-porft" 
                     class="imgHover w-full cursor-pointer object-cover rounded-4xl" />
                   </div>

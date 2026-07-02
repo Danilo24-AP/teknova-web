@@ -1,17 +1,18 @@
-import { NgOptimizedImage } from '@angular/common';
 import { afterNextRender, ChangeDetectionStrategy, Component, ElementRef, viewChild } from '@angular/core';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-seccion-uno',
-  imports: [NgOptimizedImage],
+  imports: [],
   templateUrl: './seccion-uno.html',
   styleUrl: './seccion-uno.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SeccionUno {
 
+  protected readonly assetsPath = environment.assetsUrl;
   seccionAnimada = viewChild.required<ElementRef>('seccionAnimada');
 
   constructor(){

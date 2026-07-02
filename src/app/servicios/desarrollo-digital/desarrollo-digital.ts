@@ -1,17 +1,19 @@
-import { NgOptimizedImage } from '@angular/common';
 import { afterNextRender, ChangeDetectionStrategy, Component, ElementRef, viewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-desarrollo-digital',
-  imports: [RouterLink, NgOptimizedImage],
+  imports: [RouterLink],
   templateUrl: './desarrollo-digital.html',
   styleUrl: './desarrollo-digital.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DesarrolloDigital {
+
+  protected readonly assetsPath = environment.assetsUrl;
   private seccionAnimada = viewChild.required<ElementRef>('seccionAnimada');
 
   constructor(){

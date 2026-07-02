@@ -4,15 +4,11 @@
     id="estetica-web">
 
     <div class="absolute inset-0 flex justify-center items-center">
-        <img [ngSrc]="'assets/img/portafolio/fondo1.jpeg'" alt="fondo-background"
-        width="650"
-        height="750"
-        class="absolute left-[-10] shadow-xl transform rotate-6 md:rotate-27 sm:left-[10%] md:left-[-10%] lg:left-[9.5%] z-20">
+        <img [src]=" assetsPath + '/img/portafolio/fondo1.webp'" alt="fondo-background"
+        class="absolute w-100 md:w-150 md:h-1300 left-[-10] shadow-xl transform rotate-6 md:rotate-27 sm:left-[10%] md:left-[-10%] lg:left-[0%] xl:left-[9.5%] z-20">
         
-        <img [ngSrc]="'assets/img/portafolio/fondo2.jpeg'" alt="fondo-background2"
-        width="650"
-        height="750"
-        class="hidden md:block absolute shadow-xl transform rotate-6 md:rotate-27 lg:left-[45%] md:left-[20%] md:top-[-5] z-10 opacity-90">
+        <img [src]=" assetsPath + '/img/portafolio/fondo2.webp'" alt="fondo-background2"
+        class="hidden md:w-150 md:h-660 md:block absolute shadow-xl transform rotate-6 md:rotate-27 md:left-[34%] lg:left-[43%] xl:left-[48%] md:top-[-5] z-10 opacity-90">
     </div>
 
     <div class="relative flex flex-col text-center z-50 gap-y-5">

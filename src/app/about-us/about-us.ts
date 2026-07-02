@@ -2,19 +2,20 @@ import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, ViewChil
 import { Footer } from '../compartidos/componentes/footer/footer';
 import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
-import { NgOptimizedImage } from '@angular/common';
+import { environment } from '../../environments/environment';
 
 gsap.registerPlugin(TextPlugin);
 
 @Component({
   selector: 'app-about-us',
-  imports: [Footer, NgOptimizedImage],
+  imports: [Footer],
   templateUrl: './about-us.html',
   styleUrl: './about-us.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AboutUs implements AfterViewInit {
 
+  protected readonly assetsPath = environment.assetsUrl;
   
   @ViewChild('fraseAnimada', {static: true}) fraseAnimada!: ElementRef<HTMLSpanElement>;
 
