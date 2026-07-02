@@ -40,10 +40,12 @@
   
   <app-seccion-uno></app-seccion-uno>
 
-  @defer (on viewport) {
+  @defer (on viewport; prefetch on idle) {
     <app-seccion-dos></app-seccion-dos>
   } @placeholder {
-    <div class="min-h-150 w-full"></div>
+    <div class="h-150 bg-[#F9F9F9] flex items-center justify-center">
+      <div class="animate-pulse text-gray-300">Cargando sección...</div>
+    </div>
   }
 
   @defer (on viewport) {
@@ -69,6 +71,8 @@
 <!-- SECCION CONTACTO -->
 <app-seccion-siete></app-seccion-siete>
 } @placeholder {
-    <div class="min-h-150 w-full"></div>
+    <div class="h-150 bg-[#F9F9F9] flex items-center justify-center">
+      <div class="animate-pulse text-gray-300">Cargando sección...</div>
+    </div>
   }
 <app-footer titulo="Nuestros Servicios" rutaUno="/servicios" tituloDos="Ver Portafolios" rutaDos="/portafolio"></app-footer>
