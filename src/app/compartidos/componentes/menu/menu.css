@@ -27,7 +27,7 @@ nav.nav-oculto{
 }
 
 .fondo-contacto{
-    @apply cursor-pointer py-4 lg:px-4 lg:py-2 rounded-xl bg-[#702E7D] transition-colors duration-300 ease-out hover:bg-[#6A2976] 
+    @apply cursor-pointer py-4 lg:px-4 lg:py-2 rounded-xl bg-[#702E7D] active:bg-[#121212] active:scale-105 transition-all duration-200 ease-in-out
 }
 
 .formato-boton-movil{
